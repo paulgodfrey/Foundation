@@ -1,0 +1,59 @@
+{
+  "name": "foundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ts-node-shim.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "_moduleAliases": {
+    "@models": "./dist/models",
+    "@services": "./dist/lib/services",
+    "@controllers": "./dist/controllers",
+    "@lib": "./dist/lib",
+    "@rds": "./dist/rds",
+    "@test": "./dist/test",
+    "@root": "./dist"
+  },
+  "dependencies": {
+    "@reach/router": "^1.3.3",
+    "@types/node": "^13.9.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "classnames": "^2.2.6",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "morgan": "^1.9.1",
+    "npx": "^10.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-loadable": "^5.5.0",
+    "source-map-loader": "^0.2.4",
+    "staticify": "^4.0.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-notifier": "^1.8.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "start": "node dist/cluster.js",
+    "node-dev": "npx ts-node-dev --respawn --transpileOnly ts-node-shim.js app.ts",
+    "dev": "run-p node-dev webpack-dev",
+    "webpack-dev": "npx webpack --config webpack.config.ts -w",
+    "webpack-compile": "npx webpack --config webpack.config.ts",
+    "webpack-prod": "npx webpack --config webpack.config.prod.ts",
+    "delete-dist": "rm -rf dist/*",
+    "build": "npm run compile-css && npm run compile-prod"
+  },
+  "author": "",
+  "license": "ISC"
+}

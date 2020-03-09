@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "module": "commonjs",
+    "lib": ["dom", "es5", "es6", "es7", "es2017", "esnext.asynciterable"],
+    "target": "es2017",
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@models": ["models"],
+      "@models/*": ["models/*"],
+      "@services": ["lib/services"],
+      "@services/*": ["lib/services/*"],
+      "@controllers/*": ["controllers/*"],
+      "@lib/*": ["lib/*"],
+      "@rds/*": ["rds/*"],
+      "@test/*": ["test/*"],
+      "@shared": ["public/js/src/shared"],
+      "@shared/*": ["public/js/src/shared/*"],
+      "@root": ["."],
+      "@root/*": ["./*"]
+    },
+    "typeRoots": ["node_modules_overrides", "node_modules/@types"]
+  },
+  "exclude": ["node_modules", "dist", "public", "aws_venv", "tmp"]
+}

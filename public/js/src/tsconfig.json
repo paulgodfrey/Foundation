@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "es5", "es2015", "es6", "es7", "es2017", "es2017.object"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "jsx": "react",
+    "outDir": "public/js/dist",
+    "sourceMap": true,
+    "rootDir": "../../../",
+    "baseUrl": ".",
+    "paths": {
+      "@api/*": ["./api/*"],
+      "@shared/*": ["./shared/*"],
+      "@constants/*": ["./constants/*"],
+      "@root/*": ["./*"]
+    }
+  },
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "shared", "__tests__"]
+}

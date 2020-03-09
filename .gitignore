@@ -1,0 +1,6 @@
+.DS_Store
+.history
+.env
+public/js/dist/*
+dist/*
+node_modules/*
